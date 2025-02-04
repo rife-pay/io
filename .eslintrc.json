@@ -1,0 +1,31 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "plugins": ["react", "react-hooks", "unused-imports"],
+  "rules": {
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "block-like" },
+      { "blankLine": "always", "prev": "block-like", "next": "*" }
+    ],
+    "react/jsx-newline": [
+      "error",
+      { "prevent": false } // 强制在每个 JSX 标签之间插入空行
+    ],
+    "no-unused-vars": "warn",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "unused-imports/no-unused-imports": "warn"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true
+  }
+}
